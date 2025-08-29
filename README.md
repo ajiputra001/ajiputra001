@@ -1,7 +1,7 @@
 ## Hi 👋 My name is Ajiputra and I am a Beginner from Indonesia
 
 # 💫 About Me:
-Hi Saya seorang programer pemula
+
 
 
 ## 🌐 Socials:
