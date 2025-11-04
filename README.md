@@ -49,3 +49,27 @@
   <h3>Thanks for visiting!</h3>
   <img src="https://raw.githubusercontent.com/ajiputra001/ajiputra001/output/snake.svg" alt="Snake animation" />
 </div>
+# snake.yml
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight UTC
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Generate Snake SVG
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ajiputra001 # Ganti dengan username GitHub Anda
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
